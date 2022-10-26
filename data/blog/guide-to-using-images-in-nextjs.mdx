@@ -7,6 +7,26 @@ summary: 'In this article we introduce adding images in the tailwind starter blo
 authors: ['sparrowhawk']
 ---
 
+import Image from 'next/image';
+import profilePic from '/static/images/ocean.jpeg';
+
+function Home() {
+  return (
+    <>
+      <h1>My Homepage</h1>
+      <Image
+        src={profilePic}
+        alt="Picture of the ocean"
+        // width={500} automatically provided
+        // height={500} automatically provided
+        // blurDataURL="data:..." automatically provided
+        // placeholder="blur" // Optional blur-up while loading
+      />
+      <p>Welcome to my homepage!</p>
+    </>
+  );
+}
+
 # Introduction
 
 The tailwind starter blog has out of the box support for [Next.js's built-in image component](https://nextjs.org/docs/api-reference/next/image) and automatically swaps out default image tags in markdown or mdx documents to use the Image component provided.
